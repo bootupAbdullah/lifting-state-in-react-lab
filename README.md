@@ -1,8 +1,18 @@
-# React + Vite
+two items were adopted from trouble shotting with chatGOt:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+(1) '<button onClick={() => props.addToBurger(ingredient)} >+</button>'
 
-Currently, two official plugins are available:
+specifically the evocation of the onlick as an arrow function in {'()=>'}, prior to this, each of the ingredients would add render at once.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+(2) The use of .splice here:
+
+const removeFromBurger = (ingredient, index) => {
+console.log(stack[index])
+const currentStack = [...stack]
+currentStack.splice(index, 1)
+setStack(currentStack)
+}
+
+
+Glen suggested using pop or splice, after researching which method would be beter I requsted assitance on how to iplement this method though chatGPT.
